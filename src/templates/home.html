@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title_name %}
+<head>
+    {% block title_name %}
     Home - {{block.super}}
-{% endblock title_name %}
+    {% endblock title_name %}
+</head>
+<body>
+    {% block content %}
 
-{% block content %}
+    <p>This is in the home page</p>
 
-<p>This is in the home page</p>
+    <p>Page Visits : {{ page_visits_count }}</p>
 
-<p>Page Visits : {{ page_visits_count }}</p>
+    <p>All the visits : {{ all_visits_count }}</p>
 
-<p>All the visits : {{ all_visits_count }}</p>
-
-{% endblock content %}
+    {% endblock content %}
+</body>
